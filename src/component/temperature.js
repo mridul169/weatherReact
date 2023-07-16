@@ -1,5 +1,3 @@
-// https://api.openweathermap.org/data/2.5/weather?q=Delhi&appid=109845839a0ddf7e648ffe402c55b387
-
 import React, { useEffect, useState } from "react";
 import Weather from "./weather";
 import "./style.css";
@@ -10,8 +8,6 @@ const Temperature = () => {
 
   const getWeather = async () => {
     try {
-      let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&units=metric&appid=109845839a0ddf7e648ffe402c55b387`;
-
       const res = await fetch(url);
       const data = await res.json();
 
